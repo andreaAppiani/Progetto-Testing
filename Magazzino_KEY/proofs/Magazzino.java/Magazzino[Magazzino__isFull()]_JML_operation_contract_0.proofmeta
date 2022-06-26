@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="fc530df78c3c2a13f55fb59ca9221b65" proofClosed="false" proofOutdated="false">
+   <markerMessage>
+Open Proof:
+Magazzino[Magazzino::isFull()].JML operation contract.0
+
+Reason: Goal can&apos;t be closed automatically.
+Hint: Check code and specifications for bugs or continue proof interactively.
+
+Time: 0.375 s
+Nodes: 360
+Branches: 9
+   </markerMessage>
+   <assumptions>
+      <assumption kind="Use Contract" name="JML normal_behavior operation contract 0" target="NullPointerException()" type="java.lang.NullPointerException"/>
+   </assumptions>
+   <references rep="pre: {heap=java.lang.Object::&lt;inv&gt;(heap,self)}; mby: null; post: {heap=and(imp(equals(exc,null),and(imp(equals(result,if-then-else(true,TRUE,FALSE)),all{i:int}(imp(and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),inInt(i)),equals(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(0(1(#)))))))),and(imp(equals(result,if-then-else(false,TRUE,FALSE)),exists{i:int}(and(and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),inInt(i)),lt(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(0(1(#)))))))),java.lang.Object::&lt;inv&gt;(heap,self)))),imp(not(equals(exc,null)),and(imp(equals(java.lang.Throwable::instance(exc),TRUE),java.lang.Object::&lt;inv&gt;(heap,self)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE)))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: box; transaction: false">
+      <type name="Magazzino">
+         <axiomReferences>
+            <axiomReference kjt="Magazzino" name="Class invariant axiom for Magazzino" rep="equiv(java.lang.Object::&lt;inv&gt;(heap,self),and(and(and(not(equals(int[]::select(heap,self,Magazzino::$prodotti),null)),not(equals(int[]::select(heap,self,Magazzino::$prodotti),null))),equals(length(int[]::select(heap,self,Magazzino::$prodotti)),Z(5(#)))),all{i:int}(imp(and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),inInt(i)),and(geq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(#))),leq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(0(1(#))))))))))"/>
+         </axiomReferences>
+         <accessReferences>
+            <accessReference kjt="Magazzino" name="Magazzino::prodotti" type="int" visibility="public" isStatic="false" isFinal="false" initializer=""/>
+         </accessReferences>
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Magazzino" name="isFull" parameters="" src="publicbooleanisFull () {/*//@ loop_invariant i&gt;=0 &amp;&amp; i&lt;=prodotti.length;*//*//@ loop_invariant (\forall int j;j&gt;=0 &amp;&amp; j&lt;i; prodotti[j]==100);*/for ( int i = 0; i&lt;this.prodotti.length; i++ ) {                         if (this.prodotti[i]&lt;100)       return  false;   }                 return  true; }"/>
+         </inlineMethodReferences>
+      </type>
+   </references>
+</proofMetaFile>

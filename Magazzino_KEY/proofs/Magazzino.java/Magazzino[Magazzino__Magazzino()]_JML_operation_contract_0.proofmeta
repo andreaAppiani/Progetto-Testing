@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="d537fbdd4960326ad42b7c436fd507ca" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Magazzino[Magazzino::Magazzino()].JML operation contract.0
+
+Time: 0.919 s
+Nodes: 248
+Branches: 5
+   </markerMessage>
+   <calledMethods>
+      <calledMethod fullQualifiedName="Magazzino#&lt;createObject&gt;()"/>
+      <calledMethod fullQualifiedName="Magazzino#&lt;allocate&gt;()"/>
+      <calledMethod fullQualifiedName="Magazzino#&lt;prepareEnter&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.Object#&lt;prepare&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.Object#&lt;init&gt;()"/>
+      <calledMethod fullQualifiedName="[I#&lt;createArray&gt;(int)"/>
+      <calledMethod fullQualifiedName="[I#&lt;allocate&gt;(int)"/>
+      <calledMethod fullQualifiedName="[I#&lt;createArrayHelper&gt;()"/>
+      <calledMethod fullQualifiedName="[I#&lt;prepare&gt;()"/>
+   </calledMethods>
+   <references rep="pre: {heap=true}; mby: null; post: {heap=and(imp(equals(exc,null),and(equals(length(int[]::select(heap,self,Magazzino::$prodotti)),Z(5(#))),java.lang.Object::&lt;inv&gt;(heap,self))),imp(not(equals(exc,null)),and(imp(equals(java.lang.Throwable::instance(exc),TRUE),java.lang.Object::&lt;inv&gt;(heap,self)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE)))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: diamond; transaction: false">
+      <type name="Magazzino">
+         <axiomReferences>
+            <axiomReference kjt="Magazzino" name="Class invariant axiom for Magazzino" rep="equiv(java.lang.Object::&lt;inv&gt;(heap,self),and(and(and(not(equals(int[]::select(heap,self,Magazzino::$prodotti),null)),not(equals(int[]::select(heap,self,Magazzino::$prodotti),null))),equals(length(int[]::select(heap,self,Magazzino::$prodotti)),Z(5(#)))),all{i:int}(imp(and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),inInt(i)),and(geq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(#))),leq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(0(1(#))))))))))"/>
+         </axiomReferences>
+         <accessReferences>
+            <accessReference kjt="Magazzino" name="Magazzino::prodotti" type="int" visibility="public" isStatic="false" isFinal="false" initializer=""/>
+         </accessReferences>
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Magazzino" name="&lt;init&gt;" parameters="" src="public void &lt;init&gt; () {super.&lt;init&gt;();this.prodotti=new int[5];}"/>
+         </inlineMethodReferences>
+      </type>
+   </references>
+</proofMetaFile>

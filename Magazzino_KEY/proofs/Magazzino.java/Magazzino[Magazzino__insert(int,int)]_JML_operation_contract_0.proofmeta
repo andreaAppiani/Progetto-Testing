@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="908305e62e81af14ea0f9526e2744bd6" proofClosed="false" proofOutdated="false">
+   <markerMessage>
+Open Proof:
+Magazzino[Magazzino::insert(int,int)].JML operation contract.0
+
+Reason: Max. Rule Applications reached.
+Hint: Continue proof automatic- or interactively.
+
+Time: 0.366 s
+Nodes: 523
+Branches: 11
+   </markerMessage>
+   <references rep="pre: {heap=and(and(geq(productIndex,Z(0(#))),lt(productIndex,length(int[]::select(heap,self,Magazzino::$prodotti)))),and(and(geq(addQuantity,Z(1(#))),leq(addQuantity,Z(0(1(#))))),and(exists{i:int}(and(and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),inInt(i)),leq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(0(1(#))))))),java.lang.Object::&lt;inv&gt;(heap,self))))}; mby: null; post: {heap=and(imp(equals(exc,null),and(equiv(equals(result,if-then-else(false,TRUE,FALSE)),gt(javaAddInt(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(productIndex)),addQuantity),Z(0(0(1(#)))))),and(equiv(equals(result,if-then-else(true,TRUE,FALSE)),leq(javaAddInt(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(productIndex)),addQuantity),Z(0(0(1(#)))))),and(imp(equals(result,if-then-else(true,TRUE,FALSE)),equals(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(productIndex)),javaAddInt(int::select(heapAtPre,int[]::select(heapAtPre,self,Magazzino::$prodotti),arr(productIndex)),addQuantity))),and(leq(javaDivInt(javaCastInt(sum{i:int}(if-then-else(and(inInt(i),and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),inInt(i))),TRUE,FALSE),int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)))),length(int[]::select(heap,self,Magazzino::$prodotti))),Z(0(0(1(#))))),and(all{i:int}(imp(and(and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),not(equals(i,productIndex))),inInt(i)),equals(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),int::select(heapAtPre,int[]::select(heapAtPre,self,Magazzino::$prodotti),arr(i))))),java.lang.Object::&lt;inv&gt;(heap,self))))))),imp(not(equals(exc,null)),and(imp(equals(java.lang.Throwable::instance(exc),TRUE),java.lang.Object::&lt;inv&gt;(heap,self)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE)))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: diamond; transaction: false">
+      <type name="Magazzino">
+         <axiomReferences>
+            <axiomReference kjt="Magazzino" name="Class invariant axiom for Magazzino" rep="equiv(java.lang.Object::&lt;inv&gt;(heap,self),and(and(and(not(equals(int[]::select(heap,self,Magazzino::$prodotti),null)),not(equals(int[]::select(heap,self,Magazzino::$prodotti),null))),equals(length(int[]::select(heap,self,Magazzino::$prodotti)),Z(5(#)))),all{i:int}(imp(and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),inInt(i)),and(geq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(#))),leq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(0(1(#))))))))))"/>
+         </axiomReferences>
+         <accessReferences>
+            <accessReference kjt="Magazzino" name="Magazzino::prodotti" type="int" visibility="public" isStatic="false" isFinal="false" initializer=""/>
+         </accessReferences>
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Magazzino" name="insert" parameters="int;int;" src="publicbooleaninsert (int productIndex,int addQuantity) {if (this.prodotti[productIndex]+addQuantity&gt;100)     return  false;                 else  {     this.prodotti[productIndex]+=addQuantity;     return  true;   } }"/>
+         </inlineMethodReferences>
+      </type>
+   </references>
+</proofMetaFile>

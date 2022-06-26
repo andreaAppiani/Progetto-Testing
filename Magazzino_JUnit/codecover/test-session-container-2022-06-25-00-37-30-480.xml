@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1656110250472" TestSessionContainerId="43cd2883-d9e5-4093-a72c-d5ee73b6aae7" version="1.0">
+<SrcFileList>
+<SrcFile Content="&#13;&#10;public class Magazzino {&#13;&#10;&#13;&#10;public int prodotti[];&#13;&#10;&#9;&#13;&#10;&#9;public Magazzino() {&#13;&#10;&#9;&#9;prodotti = new int[5]; //5 prodotti&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public boolean insert(int productIndex, int addQuantity) {&#13;&#10;&#9;&#9;if(!(productIndex&gt;=0 &amp;&amp; productIndex&lt;prodotti.length)) return false;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;if(!(addQuantity&gt;=1 &amp;&amp; addQuantity&lt;=10)) return false;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;if(prodotti[productIndex]+addQuantity &gt; 100) return false;&#13;&#10;&#9;&#9;&#13;&#10;&#9;&#9;else {&#13;&#10;&#9;&#9;&#9;prodotti[productIndex]+=addQuantity; return true;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public boolean isFull(int productIndex) {&#13;&#10;&#9;&#9;if(prodotti[productIndex] == 100) return true;&#13;&#10;&#9;&#9;else return false;&#13;&#10;&#9;}&#13;&#10;&#9;&#13;&#10;&#9;public boolean isFull() {&#13;&#10;&#9;&#9;for(int i=0; i&lt;prodotti.length;i++) {&#13;&#10;&#9;&#9;&#9;if(prodotti[i] &lt; 100) return false;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;&#9;return true;&#13;&#10;&#9;}&#13;&#10;}&#13;&#10;" Filename="Magazzino.java" Intrnl_Id="1"/>
+</SrcFileList>
+<CritList>
+<CritListEntry Name="org.codecover.model.utils.criteria.LoopCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.ConditionCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.BranchCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.StatementCoverage" PluginName="org.codecover"/>
+</CritList>
+<BoolOpList>
+<BoolOp Arity="2" Intrnl_Id="2" Name="conditional and (&amp;&amp;)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="02" Value="false"/>
+<MapEntry BoolAssgnmnt="10" Value="false"/>
+<MapEntry BoolAssgnmnt="11" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+<BoolOp Arity="1" Intrnl_Id="3" Name="not (!)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="1" Value="false"/>
+<MapEntry BoolAssgnmnt="0" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+</BoolOpList>
+<HierarchyLvlTypeList>
+<HierarchyLvlType EnglishName="method" IntrnlName="method" Intrnl_Id="4"/>
+<HierarchyLvlType EnglishName="class" IntrnlName="class" Intrnl_Id="5"/>
+<HierarchyLvlType EnglishName="default package" IntrnlName="default package" Intrnl_Id="6"/>
+</HierarchyLvlTypeList>
+<MASTRoot>
+<HierarchyLvl HierarchyLvlId="14" HierarchyLvlTypeId="6" Intrnl_Id="7" Name="default package">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="13" HierarchyLvlTypeId="5" Intrnl_Id="8" Name="Magazzino">
+<Header>
+<Loc EndOffset="24" SrcFileId="1" StartOffset="2"/>
+</Header>
+<LocList>
+<Loc EndOffset="725" SrcFileId="1" StartOffset="2"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="9" HierarchyLvlTypeId="4" Intrnl_Id="9" Name="Magazzino">
+<Header>
+<Loc EndOffset="76" SrcFileId="1" StartOffset="58"/>
+</Header>
+<LocList>
+<Loc EndOffset="121" SrcFileId="1" StartOffset="58"/>
+</LocList>
+<StmntSeq Intrnl_Id="10">
+<LocList>
+<Loc EndOffset="104" SrcFileId="1" StartOffset="82"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="Magazzino.java" Intrnl_Id="11">
+<LocList>
+<Loc EndOffset="104" SrcFileId="1" StartOffset="82"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="10" HierarchyLvlTypeId="4" Intrnl_Id="12" Name="insert">
+<Header>
+<Loc EndOffset="183" SrcFileId="1" StartOffset="127"/>
+</Header>
+<LocList>
+<Loc EndOffset="462" SrcFileId="1" StartOffset="127"/>
+</LocList>
+<StmntSeq Intrnl_Id="13">
+<LocList>
+<Loc EndOffset="257" SrcFileId="1" StartOffset="189"/>
+<Loc EndOffset="319" SrcFileId="1" StartOffset="265"/>
+<Loc EndOffset="458" SrcFileId="1" StartOffset="327"/>
+</LocList>
+<CondStmnt CovItemId="S2" CovItemPrefix="Magazzino.java" Intrnl_Id="14">
+<Branch CovItemId="B1" CovItemPrefix="Magazzino.java" Implct="false" Intrnl_Id="15">
+<Cond/>
+<LocList>
+<Loc EndOffset="257" SrcFileId="1" StartOffset="244"/>
+</LocList>
+<StmntSeq Intrnl_Id="16">
+<LocList>
+<Loc EndOffset="257" SrcFileId="1" StartOffset="244"/>
+</LocList>
+<BasicStmnt CovItemId="S3" CovItemPrefix="Magazzino.java" Intrnl_Id="17">
+<LocList>
+<Loc EndOffset="257" SrcFileId="1" StartOffset="244"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="Magazzino.java" Implct="true" Intrnl_Id="18">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="19">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="191" SrcFileId="1" StartOffset="189"/>
+<LocList>
+<Loc EndOffset="257" SrcFileId="1" StartOffset="189"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="Magazzino.java" Intrnl_Id="20">
+<OpTerm BooleanOpId="3" Intrnl_Id="21">
+<OpTerm BooleanOpId="2" Intrnl_Id="22">
+<BasicBoolTerm Intrnl_Id="23">
+<LocList>
+<Loc EndOffset="209" SrcFileId="1" StartOffset="194"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="24">
+<LocList>
+<Loc EndOffset="241" SrcFileId="1" StartOffset="213"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="212" SrcFileId="1" StartOffset="210"/>
+</LocList>
+</OpTerm>
+<LocList>
+<Loc EndOffset="193" SrcFileId="1" StartOffset="192"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+<CondStmnt CovItemId="S4" CovItemPrefix="Magazzino.java" Intrnl_Id="25">
+<Branch CovItemId="B3" CovItemPrefix="Magazzino.java" Implct="false" Intrnl_Id="26">
+<Cond/>
+<LocList>
+<Loc EndOffset="319" SrcFileId="1" StartOffset="306"/>
+</LocList>
+<StmntSeq Intrnl_Id="27">
+<LocList>
+<Loc EndOffset="319" SrcFileId="1" StartOffset="306"/>
+</LocList>
+<BasicStmnt CovItemId="S5" CovItemPrefix="Magazzino.java" Intrnl_Id="28">
+<LocList>
+<Loc EndOffset="319" SrcFileId="1" StartOffset="306"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B4" CovItemPrefix="Magazzino.java" Implct="true" Intrnl_Id="29">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="30">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="267" SrcFileId="1" StartOffset="265"/>
+<LocList>
+<Loc EndOffset="319" SrcFileId="1" StartOffset="265"/>
+</LocList>
+<RootTerm CovItemId="C2" CovItemPrefix="Magazzino.java" Intrnl_Id="31">
+<OpTerm BooleanOpId="3" Intrnl_Id="32">
+<OpTerm BooleanOpId="2" Intrnl_Id="33">
+<BasicBoolTerm Intrnl_Id="34">
+<LocList>
+<Loc EndOffset="284" SrcFileId="1" StartOffset="270"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="35">
+<LocList>
+<Loc EndOffset="303" SrcFileId="1" StartOffset="288"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="287" SrcFileId="1" StartOffset="285"/>
+</LocList>
+</OpTerm>
+<LocList>
+<Loc EndOffset="269" SrcFileId="1" StartOffset="268"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+<CondStmnt CovItemId="S6" CovItemPrefix="Magazzino.java" Intrnl_Id="36">
+<Branch CovItemId="B5" CovItemPrefix="Magazzino.java" Implct="false" Intrnl_Id="37">
+<Cond/>
+<LocList>
+<Loc EndOffset="385" SrcFileId="1" StartOffset="372"/>
+</LocList>
+<StmntSeq Intrnl_Id="38">
+<LocList>
+<Loc EndOffset="385" SrcFileId="1" StartOffset="372"/>
+</LocList>
+<BasicStmnt CovItemId="S7" CovItemPrefix="Magazzino.java" Intrnl_Id="39">
+<LocList>
+<Loc EndOffset="385" SrcFileId="1" StartOffset="372"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B6" CovItemPrefix="Magazzino.java" Implct="false" Intrnl_Id="40">
+<Cond>
+<Loc EndOffset="397" SrcFileId="1" StartOffset="393"/>
+</Cond>
+<LocList>
+<Loc EndOffset="458" SrcFileId="1" StartOffset="398"/>
+</LocList>
+<StmntSeq Intrnl_Id="41">
+<LocList>
+<Loc EndOffset="440" SrcFileId="1" StartOffset="404"/>
+<Loc EndOffset="453" SrcFileId="1" StartOffset="441"/>
+</LocList>
+<BasicStmnt CovItemId="S8" CovItemPrefix="Magazzino.java" Intrnl_Id="42">
+<LocList>
+<Loc EndOffset="440" SrcFileId="1" StartOffset="404"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S9" CovItemPrefix="Magazzino.java" Intrnl_Id="43">
+<LocList>
+<Loc EndOffset="453" SrcFileId="1" StartOffset="441"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="329" SrcFileId="1" StartOffset="327"/>
+<LocList>
+<Loc EndOffset="458" SrcFileId="1" StartOffset="327"/>
+</LocList>
+<RootTerm CovItemId="C3" CovItemPrefix="Magazzino.java" Intrnl_Id="44">
+<BasicBoolTerm Intrnl_Id="45">
+<LocList>
+<Loc EndOffset="370" SrcFileId="1" StartOffset="330"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="11" HierarchyLvlTypeId="4" Intrnl_Id="46" Name="isFull">
+<Header>
+<Loc EndOffset="507" SrcFileId="1" StartOffset="468"/>
+</Header>
+<LocList>
+<Loc EndOffset="585" SrcFileId="1" StartOffset="468"/>
+</LocList>
+<StmntSeq Intrnl_Id="47">
+<LocList>
+<Loc EndOffset="581" SrcFileId="1" StartOffset="513"/>
+</LocList>
+<CondStmnt CovItemId="S10" CovItemPrefix="Magazzino.java" Intrnl_Id="48">
+<Branch CovItemId="B7" CovItemPrefix="Magazzino.java" Implct="false" Intrnl_Id="49">
+<Cond/>
+<LocList>
+<Loc EndOffset="559" SrcFileId="1" StartOffset="547"/>
+</LocList>
+<StmntSeq Intrnl_Id="50">
+<LocList>
+<Loc EndOffset="559" SrcFileId="1" StartOffset="547"/>
+</LocList>
+<BasicStmnt CovItemId="S11" CovItemPrefix="Magazzino.java" Intrnl_Id="51">
+<LocList>
+<Loc EndOffset="559" SrcFileId="1" StartOffset="547"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B8" CovItemPrefix="Magazzino.java" Implct="false" Intrnl_Id="52">
+<Cond>
+<Loc EndOffset="567" SrcFileId="1" StartOffset="563"/>
+</Cond>
+<LocList>
+<Loc EndOffset="581" SrcFileId="1" StartOffset="568"/>
+</LocList>
+<StmntSeq Intrnl_Id="53">
+<LocList>
+<Loc EndOffset="581" SrcFileId="1" StartOffset="568"/>
+</LocList>
+<BasicStmnt CovItemId="S12" CovItemPrefix="Magazzino.java" Intrnl_Id="54">
+<LocList>
+<Loc EndOffset="581" SrcFileId="1" StartOffset="568"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="515" SrcFileId="1" StartOffset="513"/>
+<LocList>
+<Loc EndOffset="581" SrcFileId="1" StartOffset="513"/>
+</LocList>
+<RootTerm CovItemId="C4" CovItemPrefix="Magazzino.java" Intrnl_Id="55">
+<BasicBoolTerm Intrnl_Id="56">
+<LocList>
+<Loc EndOffset="545" SrcFileId="1" StartOffset="516"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="12" HierarchyLvlTypeId="4" Intrnl_Id="57" Name="isFull">
+<Header>
+<Loc EndOffset="614" SrcFileId="1" StartOffset="591"/>
+</Header>
+<LocList>
+<Loc EndOffset="722" SrcFileId="1" StartOffset="591"/>
+</LocList>
+<StmntSeq Intrnl_Id="58">
+<LocList>
+<Loc EndOffset="702" SrcFileId="1" StartOffset="620"/>
+<Loc EndOffset="718" SrcFileId="1" StartOffset="706"/>
+</LocList>
+<LoopStmnt CovItemId="S13" CovItemPrefix="Magazzino.java" Intrnl_Id="59" MltplExecId="L1-2" MltplExecPrefix="Magazzino.java" NvrExecId="L1-0" NvrExecPrefix="Magazzino.java" OnceExecutedId="L1-1" OnceExecutedPrefix="Magazzino.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="60">
+<LocList>
+<Loc EndOffset="697" SrcFileId="1" StartOffset="662"/>
+</LocList>
+<CondStmnt CovItemId="S14" CovItemPrefix="Magazzino.java" Intrnl_Id="61">
+<Branch CovItemId="B9" CovItemPrefix="Magazzino.java" Implct="false" Intrnl_Id="62">
+<Cond/>
+<LocList>
+<Loc EndOffset="697" SrcFileId="1" StartOffset="684"/>
+</LocList>
+<StmntSeq Intrnl_Id="63">
+<LocList>
+<Loc EndOffset="697" SrcFileId="1" StartOffset="684"/>
+</LocList>
+<BasicStmnt CovItemId="S15" CovItemPrefix="Magazzino.java" Intrnl_Id="64">
+<LocList>
+<Loc EndOffset="697" SrcFileId="1" StartOffset="684"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B10" CovItemPrefix="Magazzino.java" Implct="true" Intrnl_Id="65">
+<Cond/>
+<LocList/>
+<StmntSeq Intrnl_Id="66">
+<LocList/>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="664" SrcFileId="1" StartOffset="662"/>
+<LocList>
+<Loc EndOffset="697" SrcFileId="1" StartOffset="662"/>
+</LocList>
+<RootTerm CovItemId="C6" CovItemPrefix="Magazzino.java" Intrnl_Id="67">
+<BasicBoolTerm Intrnl_Id="68">
+<LocList>
+<Loc EndOffset="682" SrcFileId="1" StartOffset="665"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+<Keyword EndOffset="623" SrcFileId="1" StartOffset="620"/>
+<LocList>
+<Loc EndOffset="702" SrcFileId="1" StartOffset="620"/>
+</LocList>
+<RootTerm CovItemId="C5" CovItemPrefix="Magazzino.java" Intrnl_Id="69">
+<BasicBoolTerm Intrnl_Id="70">
+<LocList>
+<Loc EndOffset="650" SrcFileId="1" StartOffset="633"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</LoopStmnt>
+<BasicStmnt CovItemId="S16" CovItemPrefix="Magazzino.java" Intrnl_Id="71">
+<LocList>
+<Loc EndOffset="718" SrcFileId="1" StartOffset="706"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</MASTRoot>
+</TestSessionContainer>

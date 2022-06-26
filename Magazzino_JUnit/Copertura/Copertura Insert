@@ -1,0 +1,54 @@
+
+			METODO INSERT(productIndex, addQuantity)
+
+----------------COPERTURA ISTRUZIONI--------------
+
+istruzioni riga 11:		productIndex=-1		addQuantity=5		[TEST CASE 1]
+
+istruzioni riga 13:		productIndex=0		addQuantity=0		[TEST CASE 2]
+
+istruzioni riga 15:		non testabile tramite una singola esecuzione del metodo
+
+istruzioni riga 17-18:	productIndex=0		addQuantity=5		[TEST CASE 3]	
+
+
+---------------COPERTURA BRANCH--------------------
+
+I test 1-2-3 coprono TUTTI i branch eccetto il caso della riga 15 (non testabile)
+
+---------------COPERTURA DECISIONI-----------------
+
+Decisione  	if(!(productIndex>=0 && productIndex<prodotti.length)):
+
+			VERA:	test 1
+			FALSA:	test 3
+								
+Decisione 	if(!(addQuantity>=1 && addQuantity<=10)):
+
+			VERA:	test 2
+			FALSA:	test 3
+			
+Decisione 	if(prodotti[productIndex]+addQuantity > 100):   non testabile
+						
+						
+---------------COPERTURA MCDC-----------------	
+
+productIndex>=0		&&	  productIndex<length  					test case
+
+		T							T				F			test 3
+		F							*				T			test 1
+		T							F				T			productIndex=10		addQuantity=5		[TEST CASE 4]
+		
+addQuantity>=1		&&	  addQuantity<=10
+
+		T						    T				F			test 3
+		F							*				T			test 2
+		T							F				T			productIndex=0		addQuantity=50		[TEST CASE 5]	
+
+
+prodotti[productIndex]+addQuantity > 100
+
+				T									ottenibile tramite ciclo for
+				F									per ogni test precedente
+				
+								

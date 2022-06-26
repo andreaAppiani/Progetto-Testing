@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="1acb7fcf696855063d544fb113121510" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Magazzino[Magazzino::isFull(int)].JML operation contract.0
+
+Time: 0.664 s
+Nodes: 233
+Branches: 7
+   </markerMessage>
+   <references rep="pre: {heap=and(and(geq(productIndex,Z(0(#))),lt(productIndex,length(int[]::select(heap,self,Magazzino::$prodotti)))),java.lang.Object::&lt;inv&gt;(heap,self))}; mby: null; post: {heap=and(imp(equals(exc,null),and(equiv(equals(result,if-then-else(true,TRUE,FALSE)),equals(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(productIndex)),Z(0(0(1(#)))))),and(equiv(equals(result,if-then-else(false,TRUE,FALSE)),not(equals(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(productIndex)),Z(0(0(1(#))))))),java.lang.Object::&lt;inv&gt;(heap,self)))),imp(not(equals(exc,null)),and(imp(equals(java.lang.Throwable::instance(exc),TRUE),java.lang.Object::&lt;inv&gt;(heap,self)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE)))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: diamond; transaction: false">
+      <type name="Magazzino">
+         <axiomReferences>
+            <axiomReference kjt="Magazzino" name="Class invariant axiom for Magazzino" rep="equiv(java.lang.Object::&lt;inv&gt;(heap,self),and(and(and(not(equals(int[]::select(heap,self,Magazzino::$prodotti),null)),not(equals(int[]::select(heap,self,Magazzino::$prodotti),null))),equals(length(int[]::select(heap,self,Magazzino::$prodotti)),Z(5(#)))),all{i:int}(imp(and(and(geq(i,Z(0(#))),lt(i,length(int[]::select(heap,self,Magazzino::$prodotti)))),inInt(i)),and(geq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(#))),leq(int::select(heap,int[]::select(heap,self,Magazzino::$prodotti),arr(i)),Z(0(0(1(#))))))))))"/>
+         </axiomReferences>
+         <accessReferences>
+            <accessReference kjt="Magazzino" name="Magazzino::prodotti" type="int" visibility="public" isStatic="false" isFinal="false" initializer=""/>
+         </accessReferences>
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Magazzino" name="isFull" parameters="int;" src="publicbooleanisFull (finalint productIndex) {if (this.prodotti[productIndex]==100)     return  true;                 else      return  false; }"/>
+         </inlineMethodReferences>
+      </type>
+   </references>
+</proofMetaFile>
