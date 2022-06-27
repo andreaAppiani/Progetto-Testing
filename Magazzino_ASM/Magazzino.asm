@@ -1,7 +1,7 @@
 asm Magazzino
 
 import StandardLibrary
-//import CTLlibrary
+import CTLlibrary
 
 signature:
 
