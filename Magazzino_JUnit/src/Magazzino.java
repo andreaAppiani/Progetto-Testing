@@ -1,12 +1,11 @@
 
 public class Magazzino {
 
-public int prodotti[];
+transient public int prodotti[];
 	
 	public Magazzino() {
 		prodotti = new int[5]; //5 prodotti
-		int i;
-		if(prodotti == null) i = prodotti.length;
+		assert prodotti.length==5;
 	}
 	
 	public boolean insert(int productIndex, int addQuantity) {
@@ -17,19 +16,27 @@ public int prodotti[];
 		if(prodotti[productIndex]+addQuantity > 100) return false;
 		
 		else {
-			prodotti[productIndex]+=addQuantity; return true;
+			assert prodotti[productIndex]+addQuantity <= 100;
+			prodotti[productIndex]+=addQuantity;
+			return true;
 		}
 	}
 	
-	public boolean isFull(int productIndex) {
+	public boolean isFull(final int productIndex) {
 		if(prodotti[productIndex] == 100) return true;
-		else return false;
+		else {
+			assert prodotti[productIndex] != 100;
+			return false;
+		}
 	}
 	
 	public boolean isFull() {
-		for(int i=0; i<prodotti.length;i++) {
-			if(prodotti[i] < 100) return false;
+		for(int p : prodotti) {
+			if(p < 100) return false;
 		}
+		
+		for(int p : prodotti) {assert p == 100;}
+		
 		return true;
 	}
 }

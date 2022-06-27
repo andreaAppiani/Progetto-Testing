@@ -1,0 +1,24 @@
+Model Magazzino
+// This is an example model
+Parameters:
+  productIndex : [-1 .. 5] //testo anche valori errati
+  addQuantity : [-1 .. 11] //invece di 0..10
+  returnedValue : Boolean
+  nProductsOld : [-1 .. 101] //n° prodotti prima di fare addQuantity
+  nProductsNew : [-1 .. 101]
+
+Constraints:
+  # (addQuantity > 10 || addQuantity < 0) => returnedValue == FALSE #
+  
+  # (productIndex > 4 || productIndex < 0) => returnedValue == FALSE #
+  
+  # (nProductsOld + addQuantity >= 100) => returnedValue == FALSE #
+  
+  # returnedValue == True => (nProductsNew == nProductsOld + addQuantity) # 
+  
+  # returnedValue == False => (nProductsNew == nProductsOld) # //rimane invariato
+  
+  # (not (addQuantity > 10 || addQuantity < 0) and not (productIndex > 4 || productIndex < 0) and not (nProductsOld + addQuantity >= 100)) => returnedValue == TRUE #
+  //nego tutte le condizioni che ritornerebbero falso, in questo caso quindi devo avere true
+  
+  

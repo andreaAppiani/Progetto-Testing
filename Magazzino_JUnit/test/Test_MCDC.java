@@ -21,7 +21,7 @@ class Test_MCDC {
 		
 		assertFalse(M.insert(10, 5));		// [TEST CASE 4]
 		
-		assertFalse(M.insert(0, 50));		// [TEST CASE 4]
+		assertFalse(M.insert(0, 50));		// [TEST CASE 5]
 		
 		for(int i=0; i<10; i++) M.insert(1, 10);
 		

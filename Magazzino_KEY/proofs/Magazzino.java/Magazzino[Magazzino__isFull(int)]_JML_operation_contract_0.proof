@@ -2,7 +2,7 @@
 
 \settings {
 "#Proof-Settings-Config-File
-#Sun Jun 26 11:48:45 CEST 2022
+#Sun Jun 26 22:07:06 CEST 2022
 [StrategyProperty]QUERYAXIOM_OPTIONS_KEY=QUERYAXIOM_ON
 [SMTSettings]invariantForall=false
 [Strategy]ActiveStrategy=JavaCardDLStrategy
@@ -42,7 +42,7 @@
 \javaSource "../../src";
 
 \proofObligation "#Proof Obligation Settings
-#Sun Jun 26 11:48:45 CEST 2022
+#Sun Jun 26 22:07:06 CEST 2022
 contract=Magazzino[Magazzino\\:\\:isFull(int)].JML operation contract.0
 name=Magazzino[Magazzino\\:\\:isFull(int)].JML operation contract.0
 class=de.uka.ilkd.key.proof.init.FunctionalOperationContractPO
@@ -52,6 +52,7 @@ class=de.uka.ilkd.key.proof.init.FunctionalOperationContractPO
 (keyLog "0" (keyUser "Andrea" ) (keyVersion "19f0b8c2a4fe689cd76be6cd1753b36e2e825a89"))
 (keyLog "1" (keyUser "Andrea" ) (keyVersion "19f0b8c2a4fe689cd76be6cd1753b36e2e825a89"))
 (keyLog "2" (keyUser "Andrea" ) (keyVersion "19f0b8c2a4fe689cd76be6cd1753b36e2e825a89"))
+(keyLog "3" (keyUser "Andrea" ) (keyVersion "19f0b8c2a4fe689cd76be6cd1753b36e2e825a89"))
 
 (autoModeTime "599")
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proofMetaFile proofFileMD5="d537fbdd4960326ad42b7c436fd507ca" proofClosed="true" proofOutdated="false">
+<proofMetaFile proofFileMD5="62eed482f90ed83df9a29f86c699f48" proofClosed="true" proofOutdated="false">
    <markerMessage>
 Closed Proof:
 Magazzino[Magazzino::Magazzino()].JML operation contract.0
 
-Time: 0.919 s
+Time: 1.533 s
 Nodes: 248
 Branches: 5
    </markerMessage>

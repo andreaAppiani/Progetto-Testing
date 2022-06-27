@@ -40,6 +40,7 @@ public class MagazzinoJML {
 	//@ requires productIndex>=0 && productIndex<prodotti.length;
 	//@ ensures \result==true ==> (prodotti[productIndex] == 100); 
 	//@ ensures \result==false ==> (prodotti[productIndex] != 100);
+	//@ pure
 	public boolean isFull(int productIndex) {
 		if(prodotti[productIndex] == 100) return true;
 		else return false;
@@ -49,6 +50,7 @@ public class MagazzinoJML {
 	//@ ensures \result==true <==> (\forall int i; i>=0 && i<prodotti.length; prodotti[i]==100);
 	//@ ensures \result==false <==> (\exists int i; i>=0 && i<prodotti.length; prodotti[i]<100);
 	//@ diverges true;
+	//@ pure
 	public boolean isFull() {
 		//@ loop_invariant i>=0 && i<=prodotti.length;
 		//@ loop_invariant (\forall int j;j>=0 && j<i; prodotti[j]==100);

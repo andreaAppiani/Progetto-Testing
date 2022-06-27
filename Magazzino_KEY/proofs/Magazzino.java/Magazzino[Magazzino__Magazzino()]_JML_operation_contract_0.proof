@@ -2,7 +2,7 @@
 
 \settings {
 "#Proof-Settings-Config-File
-#Sat Jun 25 17:54:16 CEST 2022
+#Sun Jun 26 22:07:06 CEST 2022
 [StrategyProperty]QUERYAXIOM_OPTIONS_KEY=QUERYAXIOM_ON
 [SMTSettings]invariantForall=false
 [Strategy]ActiveStrategy=JavaCardDLStrategy
@@ -23,7 +23,9 @@
 [StrategyProperty]STOPMODE_OPTIONS_KEY=STOPMODE_NONCLOSE
 [StrategyProperty]CLASS_AXIOM_OPTIONS_KEY=CLASS_AXIOM_FREE
 [SMTSettings]useConstantsForBigOrSmallIntegers=true
+[StrategyProperty]SYMBOLIC_EXECUTION_NON_EXECUTION_BRANCH_HIDING_OPTIONS_KEY=SYMBOLIC_EXECUTION_NON_EXECUTION_BRANCH_HIDING_OFF
 [Strategy]Timeout=-1
+[StrategyProperty]SYMBOLIC_EXECUTION_ALIAS_CHECK_OPTIONS_KEY=SYMBOLIC_EXECUTION_ALIAS_CHECK_NEVER
 [StrategyProperty]QUERY_NEW_OPTIONS_KEY=QUERY_OFF
 [SMTSettings]useUninterpretedMultiplication=true
 [StrategyProperty]BLOCK_OPTIONS_KEY=BLOCK_CONTRACT
@@ -40,7 +42,7 @@
 \javaSource "../../src";
 
 \proofObligation "#Proof Obligation Settings
-#Sat Jun 25 17:54:16 CEST 2022
+#Sun Jun 26 22:07:06 CEST 2022
 contract=Magazzino[Magazzino\\:\\:Magazzino()].JML operation contract.0
 name=Magazzino[Magazzino\\:\\:Magazzino()].JML operation contract.0
 class=de.uka.ilkd.key.proof.init.FunctionalOperationContractPO
@@ -48,6 +50,7 @@ class=de.uka.ilkd.key.proof.init.FunctionalOperationContractPO
 
 \proof {
 (keyLog "0" (keyUser "Andrea" ) (keyVersion "19f0b8c2a4fe689cd76be6cd1753b36e2e825a89"))
+(keyLog "1" (keyUser "Andrea" ) (keyVersion "19f0b8c2a4fe689cd76be6cd1753b36e2e825a89"))
 
 (autoModeTime "792")
 
@@ -237,7 +240,7 @@ class=de.uka.ilkd.key.proof.init.FunctionalOperationContractPO
          (rule "hideAuxiliaryEq" (formula "1"))
          (rule "replace_known_left" (formula "10") (term "0") (ifseqformula "1"))
          (builtin "One Step Simplification" (formula "10"))
-         (rule "Class_invariant_axiom_for_Magazzino" (formula "10") (inst "i=i") (inst "sk=sk_0") (ifseqformula "3"))
+         (rule "Class_invariant_axiom_for_Magazzino" (formula "10") (inst "sk=sk_0") (inst "i=i") (ifseqformula "3"))
          (branch "Use Axiom"
             (builtin "One Step Simplification" (formula "10"))
             (rule "dismissNonSelectedField" (formula "10") (term "1,0,0,1,0,1"))
