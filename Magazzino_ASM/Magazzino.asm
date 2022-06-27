@@ -31,12 +31,12 @@ definitions:
 		if quantita($p)<4 then quantita($p) := quantita($p)+2 endif
 	
 	
-//	//Proprietà
-//	CTLSPEC (exist $p in Prodotti with ef(quantita($p)=5))
-//	CTLSPEC (forall $p in Prodotti with ag(quantita($p)=5 implies ag(quantita($p)=5)))
-//	//CTLSPEC ag(not tuttoPieno)
-//	CTLSPEC af(quantita(LAMPADA)>0 or quantita(BICICLETTA)>0)
-//	CTLSPEC ag(quantita(LAMPADA)>=0 and quantita(BICICLETTA)>=0)
+	//ProprietÃ 
+	CTLSPEC (exist $p in Prodotti with ef(quantita($p)=5))
+	CTLSPEC (forall $p in Prodotti with ag(quantita($p)=5 implies ag(quantita($p)=5)))
+	//CTLSPEC ag(not tuttoPieno)
+	CTLSPEC af(quantita(LAMPADA)>0 or quantita(BICICLETTA)>0)
+	CTLSPEC ag(quantita(LAMPADA)>=0 and quantita(BICICLETTA)>=0)
 	
 	main rule r_main =
 		
