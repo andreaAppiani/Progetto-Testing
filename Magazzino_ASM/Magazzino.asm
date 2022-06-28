@@ -16,6 +16,7 @@ signature:
 	controlled quantita : Prodotti -> Quantita
 	
 	derived tuttoPieno : Boolean
+	derived tuttoVuoto : Boolean
 
 definitions:
 
@@ -23,6 +24,8 @@ definitions:
 	domain Aggiunta = {1,2}
 	
 	function tuttoPieno = (forall $p in Prodotti with quantita($p)=5)
+	
+	function tuttoVuoto= (forall $p in Prodotti with quantita($p)=0)
 	
 	macro rule r_add1($p in Prodotti)=
 		if quantita($p)<5 then quantita($p) := quantita($p)+1 endif
