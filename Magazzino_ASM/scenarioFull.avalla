@@ -1,0 +1,39 @@
+scenario scenarioFull
+
+load Magazzino.asm
+
+check tuttoVuoto = true;
+
+set prod_scelto := BICICLETTA;
+set agg_scelta := 2;
+
+step
+
+check tuttoVuoto = false;
+set prod_scelto := BICICLETTA;
+set agg_scelta := 2;
+
+step
+
+set prod_scelto := BICICLETTA;
+set agg_scelta := 1;
+
+step
+
+check quantita(BICICLETTA) = 5;
+set prod_scelto := LAMPADA;		//inizio a riempire l'altro prodotto
+set agg_scelta := 2;
+
+step
+
+set prod_scelto := LAMPADA;
+set agg_scelta := 2;
+
+step
+
+set prod_scelto := LAMPADA;
+set agg_scelta := 1;
+
+step
+
+check tuttoPieno;
