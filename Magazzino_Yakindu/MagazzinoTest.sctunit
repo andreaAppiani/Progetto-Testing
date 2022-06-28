@@ -1,0 +1,29 @@
+testclass MagazzinoTest for statechart Statechart {
+	
+	@Test
+	operation testFull() {
+		enter
+		assert active (Magazzino.Tutti_Vuoti) 
+		//confermo che la prima regione attiva sia questa
+		
+		raise agg_1_Prodotto1
+		
+		assert active (Magazzino.Prodotti_non_vuoti) 
+		
+		raise agg_2_Prodotto1
+		raise agg_2_Prodotto1
+		
+		assert pieno1
+		
+		raise agg_1_Prodotto2
+		raise agg_2_Prodotto2
+		raise agg_2_Prodotto2
+		
+		raise agg_1_Prodotto1 //controllo non vada oltre il limite
+		assert quantita1==5
+		
+		assert active (Magazzino.Tutti_Pieni) 
+		
+		exit
+	}
+}

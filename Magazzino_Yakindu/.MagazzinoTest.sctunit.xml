@@ -1,0 +1,4 @@
+<testsuite name="MagazzinoTest" time="">
+  <testcase name="testFull" classname="platform:/resource/Magazzino_Yakindu/MagazzinoTest.sctunit#MagazzinoTest.testFull" time="">
+  </testcase>
+</testsuite>
