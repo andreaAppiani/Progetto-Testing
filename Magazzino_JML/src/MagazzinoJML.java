@@ -34,7 +34,6 @@ public class MagazzinoJML {
 		
 		else {
 			prodotti[productIndex]+=addQuantity; return true;
-			//prodotti[productIndex]+=5	viola la postcondizione
 		}
 	}
 	
@@ -43,7 +42,6 @@ public class MagazzinoJML {
 	//@ ensures \result==false ==> (prodotti[productIndex] != 100);
 	//@ pure
 	public boolean isFull(int productIndex) {
-		//if(true) return true		viola la postcondizione
 		if(prodotti[productIndex] == 100) return true;
 		else return false;
 	}
@@ -57,7 +55,6 @@ public class MagazzinoJML {
 		//@ loop_invariant i>=0 && i<=prodotti.length;
 		//@ loop_invariant (\forall int j;j>=0 && j<i; prodotti[j]==100);
 		for(int i=0; i<prodotti.length;i++) {
-			// If(true) return false		viola la postcondizione solo se il primo prodotto è pieno
 			if(prodotti[i] < 100) return false;
 		}
 		return true;
