@@ -11,6 +11,7 @@ public class MagazzinoJML {
 	//@ ensures prodotti.length==5;
 	public MagazzinoJML() {
 		prodotti = new int[5]; 
+		//prodotti = new int[10];	violazione della postcondizione
 	}
 	
 	//@ requires productIndex>=0 && productIndex<prodotti.length;
