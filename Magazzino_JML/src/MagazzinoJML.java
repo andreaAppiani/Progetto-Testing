@@ -34,6 +34,7 @@ public class MagazzinoJML {
 		
 		else {
 			prodotti[productIndex]+=addQuantity; return true;
+			// prodotti[productIndex]+= 5;		violerebbe la postcondizione
 		}
 	}
 	
@@ -43,6 +44,7 @@ public class MagazzinoJML {
 	//@ pure
 	public boolean isFull(int productIndex) {
 		if(prodotti[productIndex] == 100) return true;
+		// if(false) return true;		violazione della Postcondizione solo se il prodotto è pieno
 		else return false;
 	}
 	
@@ -56,6 +58,7 @@ public class MagazzinoJML {
 		//@ loop_invariant (\forall int j;j>=0 && j<i; prodotti[j]==100);
 		for(int i=0; i<prodotti.length;i++) {
 			if(prodotti[i] < 100) return false;
+			// if(true) return false;	violazione della Postcondizione (ma solo se i prodotti sono tutti pieni)
 		}
 		return true;
 	}
@@ -64,14 +67,16 @@ public class MagazzinoJML {
 		
 	MagazzinoJML M = new MagazzinoJML();
 	
-	M.insert(0, 10);
+	M.insert(0, 10);	//inserimento corretto
 	System.out.println(M.prodotti[0]);
 	
-	M.insert(0, 20);
+	M.insert(0, 20);	//violazione della precondizione
 	System.out.println(M.prodotti[0]);
 	
-	M.insert(-1, 5);
+	M.insert(-1, 5);	//violazione della precondizione
 	System.out.println(M.prodotti[0]);
+		
+	M.isFull(-1);		//violazione della precondizione di isFull(int)
 		
 	}
 }
