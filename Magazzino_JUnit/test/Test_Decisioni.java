@@ -12,11 +12,11 @@ class Test_Decisioni {
 		
 		assertFalse(M.insert(0, 0));		// [TEST CASE 2]
 		
-		assertTrue(M.insert(0, 5));			// [TEST CASE 3]
+		assertTrue(M.insert(0, 5));		// [TEST CASE 3]
 		
 		// Test per avere Falsa la decisione prodotti[productIndex]+addQuantity > 100
 		for(int i=0; i<10; i++) M.insert(0, 10);	
-		assertFalse(M.insert(0, 10));
+		assertFalse(M.insert(0, 5));
 	}
 	
 	@Test
@@ -31,9 +31,18 @@ class Test_Decisioni {
 				M.insert(i, 10);
 		}
 		
-		assertTrue(M.isFull());	//testo la decisione Vera
-		
-		
+		assertTrue(M.isFull());	//testo la decisione Vera		
 	}
+	
+	@Test
+	void testIsFullIndex(){
+		Magazzino M = new Magazzino();
+		
+		assertFalse(M.isFull(0));
+		
+		for(int i=0; i<10; i++) M.insert(0, 10);
+		
+		assertTrue(M.isFull(0));
+	}	
 
 }
